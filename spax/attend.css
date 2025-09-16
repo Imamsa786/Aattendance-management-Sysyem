@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #982a2a);
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+#loginPage {
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+h2{
+  margin-bottom: 20px;
+  color: #f9f9f9;
+  text-align: center;
+  font-size: 50px;
+}
+.login-box{
+  width: 400px;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(207, 198, 139, 0.8);
+  text-align: center;
+  border-radius: 10px;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+#dropZone {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  border: 2px dashed #888;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #8b7e7e;
+}
+#dropZone.dragover {
+  background: #d1ffd1;
+  border-color: green;
+}
+h3{
+  margin-top: 0;
+  text-align: center;
+  font-size: 30px;
+}
+table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-group {
+  text-align: center;
+  margin-top: 20px;
+}
+.present {
+  background-color: green;
+  color: white;
+}
+
+.absent {
+  background-color: red;
+  color: white;
+}
+.present {
+  background-color: green !important;
+  color: white;
+}
+.absent {
+  background-color: red !important;
+  color: white;
+}
+#submitAttendance {
+  background-color: blue;
+  color: white;
+}

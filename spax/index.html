@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPAx_2</title>
+  <link rel="stylesheet" href="attend.css">
+</head>
+<body>
+  <!-- Login Page -->
+  <div id="loginPage" class="login-box">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+    <p id="loginError" style="color:red;"></p>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard" style="display:none;">
+    <h2 id="dashboardTitle"></h2>
+    <!-- 🔹 Add this inside your dashboard section, above the table -->
+<div class="search-bar">
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="Search by Name, Register No, Dept..." 
+    onkeyup="searchTable()"
+    style="width:100%; padding:8px; border-radius:5px; margin-bottom:10px;"
+  >
+</div>
+
+    <!-- Admin Upload -->
+    <div id="adminSection" style="display:none;">
+      <h3>Upload Participant File</h3>
+      <div id="dropZone">Drag & Drop Excel/CSV Here or Click to Upload</div>
+      <input type="file" id="fileUpload" accept=".xlsx,.csv" style="display:none;">
+      <br><br>
+    </div>
+
+    <h3>Attendance List</h3>
+    <table border="1" id="attendanceTable">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Register No</th>
+          <th>Year</th>
+          <th>Dept</th>
+          <th>Section</th>
+          <th>Attendance</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <br><br>
+    <div class="btn-group">
+    <button onclick="submitAttendance()">Submit Attendance</button>
+    <button onclick="downloadAttendance()">Download Report</button>
+    <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="attend.js"></script>
+</body>
+</html>
